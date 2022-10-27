@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  flb-client:
+    image: fluent/fluent-bit:2.0.0-debug
+    command: /fluent-bit/bin/fluent-bit -c /etc/fluent-bit/client.conf
+    volumes:
+      - type: bind
+        source: conf/
+        target: /etc/fluent-bit
+    networks:
+      - intranet
+
+  flb-server:
+    image: fluent/fluent-bit:2.0.0
+    command: /fluent-bit/bin/fluent-bit -c /etc/fluent-bit/server.conf
+    volumes:
+      - type: bind
+        source: conf/
+        target: /etc/fluent-bit
+    networks:
+      - intranet
+
+networks:
+  intranet:
