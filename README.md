@@ -17,7 +17,8 @@ msg1
 
 You should see the following output in the container logs:
 
-`flb-client`:
+**flb-client**:
+
 ```
 Fluent Bit v2.0.0
 * Copyright (C) 2015-2022 The Fluent Bit Authors
@@ -70,7 +71,7 @@ Fluent Bit v2.0.0
 [2022/10/27 10:56:43] [ warn] [engine] failed to flush chunk '1-1666868202.807254959.flb', retry in 11 seconds: task_id=0, input=tcp.0 > output=forward.0 (out_id=0)
 ```
 
-`flb-server`:
+**flb-server:**
 ```
 Fluent Bit v2.0.0
 * Copyright (C) 2015-2022 The Fluent Bit Authors
